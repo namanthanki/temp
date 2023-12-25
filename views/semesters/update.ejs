@@ -1,0 +1,17 @@
+<h1>Edit Semester</h1>
+
+<form action="/semesters/<%= semester._id %>?_method=PUT" method="POST">
+    <!-- Add this line for method override -->
+    <input type="hidden" name="_method" value="PUT">
+
+    <label for="name">Semester Name:</label>
+    <input type="text" id="name" name="name" value="<%= semester.name %>" required>
+
+    <button type="submit">Update Semester</button>
+</form>
+
+<form action="/semesters/<%= semester._id %>?_method=DELETE" method="POST">
+    <p>Are you sure you want to delete <%= semester.name %>?</p>
+
+    <button type="submit" style="color: red;">Delete Semester</button>
+</form>

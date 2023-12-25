@@ -1,0 +1,16 @@
+<h1>Edit PDF File</h1>
+
+<form action="/pdf-files/<%= pdfFile._id %>?_method=PUT" method="POST">
+
+    <label for="name">PDF File Name:</label>
+    <input type="text" id="name" name="name" value="<%= pdfFile.name %>" required>
+
+    <button type="submit">Update PDF File</button>
+</form>
+
+<form action="/pdf-files/<%= pdfFile._id %>?_method=DELETE" method="POST">
+
+    <p>Are you sure you want to delete <%= pdfFile.name %>?</p>
+
+    <button type="submit" style="color: red;">Delete PDF File</button>
+</form>

@@ -1,0 +1,11 @@
+<!-- views/subjects/index.ejs -->
+
+<h1>Subjects</h1>
+
+<ul>
+  <% subjects.forEach(subject => { %>
+    <li>
+      <a href="/subjects/<%= subject._id %>"><%= subject.name %></a>
+    </li>
+  <% }); %>
+</ul>

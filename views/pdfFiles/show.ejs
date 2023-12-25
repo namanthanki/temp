@@ -1,0 +1,8 @@
+<h1><%= pdfFile.name %></h1>
+
+<p>Subject: <%= pdfFile.subjectId %></p>
+<p>File Path: <%= pdfFile.filePath %></p>
+
+<a href="/pdf-files/<%= pdfFile._id %>/download" target="_blank">Download PDF</a>
+
+<!-- Display additional information about the PDF file as needed -->

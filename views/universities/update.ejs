@@ -1,0 +1,16 @@
+<!-- views/universities/update.ejs -->
+
+<h1>Edit University</h1>
+
+<form action="/universities/<%= university._id %>?_method=PUT" method="POST">
+
+  <label for="name">University Name:</label>
+  <input type="text" id="name" name="name" value="<%= university.name %>" required>
+
+  <button type="submit">Update University</button>
+</form>
+
+<!-- Add delete button -->
+<form action="/universities/<%= university._id %>?_method=DELETE" method="POST">
+    <button type="submit" style="color: red;">Delete University</button>
+</form>

@@ -1,0 +1,11 @@
+<!-- views/branches/index.ejs -->
+
+<h1>Branches</h1>
+
+<ul>
+  <% branches.forEach(branch => { %>
+    <li>
+      <a href="/branches/<%= branch._id %>"><%= branch.name %></a>
+    </li>
+  <% }); %>
+</ul>

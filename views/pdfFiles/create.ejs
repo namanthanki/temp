@@ -1,0 +1,17 @@
+<!-- views/pdfFiles/create.ejs -->
+
+<h1>Create PDF File</h1>
+
+<form action="/pdf-files" method="POST" enctype="multipart/form-data">
+  <label for="pdfFile">PDF File:</label>
+  <input type="file" id="pdfFile" name="pdfFile" required>
+
+  <label for="subjectId">Subject:</label>
+  <select id="subjectId" name="subjectId" required>
+    <% subjects.forEach(subject => { %>
+      <option value="<%= subject._id %>"><%= subject.name %></option>
+    <% }); %>
+  </select>
+
+  <button type="submit">Upload PDF File</button>
+</form>

@@ -1,0 +1,9 @@
+<h1>PDF Files</h1>
+
+<ul>
+  <% pdfFiles.forEach(pdfFile => { %>
+    <li>
+      <a href="/pdf-files/<%= pdfFile._id %>"><%= pdfFile.name %></a>
+    </li>
+  <% }); %>
+</ul>

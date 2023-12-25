@@ -1,0 +1,11 @@
+<!-- views/semesters/index.ejs -->
+
+<h1>Semesters</h1>
+
+<ul>
+  <% semesters.forEach(semester => { %>
+    <li>
+      <a href="/semesters/<%= semester._id %>"><%= semester.name %></a>
+    </li>
+  <% }); %>
+</ul>
